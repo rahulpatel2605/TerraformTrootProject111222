@@ -1,0 +1,27 @@
+########################################### Steps for Demo Web Project #####################################
+
+1) install terraform
+2) mkdir demo
+3) cd demo
+4) apply terraform init
+5) Give Provider details like; cloud provider(aws), region, access_key, secret_key.
+
+6) Create EC2 instance details are;
+7) Give resource name "aws_instance"
+8) Give ami id as per requirement it's available in cloud "ami-03d3eec31be6ef6f9"
+9) Select instance_type as per requirement "t2.micro"
+10) Provide details for security group and key name
+11) Mention tag name
+12) Use Attributes Reference "user_data '' for installing apache2, create a web page && enable ssh port 44332 instead of default 22.
+
+13) Create elastic ip - provide resource details, instance details, vpc should be true
+14) Associate elastic ip with instance so that while rebooting it should not be change
+
+15) Create a security group and add ingress & egress rule for allow or deny port.
+
+
+
+Note:-
+1) Key attached "Troot-key.pem"
+2) Use port number while ssh "-p44332"
+3) Use public ip for web browsing
